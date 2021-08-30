@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="asset/bootstrap-icons.css" rel="stylesheet">
+
+  <title>Title</title>
+</head>
+
+<body>
+<script src="js/bootstrap.min.js"></script>
+
+<nav class="navbar navbar-nav bg-dark">
+  <div class="container">
+    <a class="navbar-brand text-white" href="#">Custom Discord Presence</a>
+
+    <div>
+      <form class="d-flex">
+        <button class="btn btn-success" id="apply" type="button">Apply</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<br>
+
+<main class="container">
+  <div id="msg-zone" style="padding: 1em"></div>
+  <!----------------- DISCORD SETTINGS ----------------->
+  <div class="container" id="discord-settings">
+    <h4>
+      Discord Settings
+      <small class="text-muted">디스코드 설정</small>
+    </h4>
+    <div class="input-group">
+      <span class="input-group-text col-5 text-center">Application ID</span>
+      <input class="form-control" id="discord-application-id" type="text">
+    </div>
+  </div>
+  <!----------------- DISCORD SETTINGS ----------------->
+  <hr>
+
+  <!----------------- PRESENCE SETTINGS ----------------->
+  <div class="container" id="presence-settings">
+    <h4>
+      Presence Settings
+      <small class="text-muted">상태 설정</small>
+    </h4>
+    <!-- STATE -->
+    <div class="input-group flex-wrap">
+      <span class="input-group-text col-5">State</span>
+      <input class="form-control" id="state" type="text">
+    </div>
+
+    <!-- DETAILS -->
+    <div class="input-group text-center" style="padding-top: 0.25em">
+      <span class="input-group-text col-5">Details</span>
+      <input class="form-control" id="details" type="text">
+    </div>
+
+    <!-- START TIME -->
+    <div class="input-group text-center" style="padding-top: 0.25em">
+      <span class="input-group-text col-5">Start Time</span>
+      <input class="form-control" id="start-time" type="datetime-local">
+    </div>
+
+    <!-- END TIME -->
+    <div class="input-group text-center" style="padding-top: 0.25em">
+      <span class="input-group-text col-5">End Time</span>
+      <input class="form-control" id="end-time" type="datetime-local">
+    </div>
+
+    <!-- LARGE IMAGE KEY -->
+    <div class="input-group text-center" style="padding-top: 0.25em">
+      <span class="input-group-text col-5">Large Image Key</span>
+      <input class="form-control" id="large-image-key" type="text">
+    </div>
+
+    <!-- LARGE IMAGE TEXT -->
+    <div class="input-group text-center" style="padding-top: 0.25em">
+      <span class="input-group-text col-5">Large Image Text</span>
+      <input class="form-control" id="large-image-text" type="text">
+    </div>
+
+    <!-- SMALL IMAGE KEY -->
+    <div class="input-group text-center" style="padding-top: 0.25em">
+      <span class="input-group-text col-5">Small Image Key</span>
+      <input class="form-control" id="small-image-key" type="text">
+    </div>
+
+    <!-- SMALL IMAGE TEXT -->
+    <div class="input-group text-center" style="padding-top: 0.25em">
+      <span class="input-group-text col-5">Large Image Text</span>
+      <input class="form-control" id="small-image-text" type="text">
+    </div>
+
+    <!-- BUTTONS -->
+    <div>
+      <h5 style="padding-top: 1em">Buttons <small class="text-muted">버튼 추가</small></h5>
+      <div id="buttons" style="padding-top: 0.5em">
+      </div>
+      <button class="btn btn-dark col-12" id="button-add-button" type="button"><i class="bi-plus"></i></button>
+    </div>
+  </div>
+  <!----------------- PRESENCE SETTINGS ----------------->
+  <hr>
+
+</main>
+
+<script src="js/index.js"></script>
+<script src="js/ipc.js"></script>
+</body>
+</html>

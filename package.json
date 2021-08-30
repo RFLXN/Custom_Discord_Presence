@@ -1,0 +1,23 @@
+{
+  "name": "custom_presence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "autobuild": "tsc -w",
+    "run": "electron ./dist/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/discord-rpc": "^4.0.0",
+    "electron-builder": "^22.11.7"
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "electron": "^13.2.3"
+  }
+}

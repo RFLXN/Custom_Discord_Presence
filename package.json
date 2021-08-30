@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "discord-rpc": "^4.0.1",
-    "electron": "^13.2.3"
+    "electron": "^13.2.3",
+    "bootstrap": "^5.1.0",
+    "bootstrap-icons": "^1.5.0"
   }
 }

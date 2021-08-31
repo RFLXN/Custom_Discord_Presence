@@ -3,6 +3,7 @@ import {ActivityOptionBuilder, ButtonBuilder, LoginOptionBuilder} from "./discor
 import Discord from "./discord/discord";
 import {Button} from "./discord/types";
 import {IpcMainEvent} from "electron";
+import {saveData} from "./local-data";
 
 const handler = async (event: IpcMainEvent, args: any) => {
     const data = args as RawData;
@@ -26,13 +27,11 @@ const handler = async (event: IpcMainEvent, args: any) => {
 
         if (data.presenceStartTime != undefined && data.presenceStartTime != "") {
             const date = new Date(data.presenceStartTime);
-            console.log(date);
             presenceOption.setStartTimestamp(date);
         }
 
         if (data.presenceEndTime != undefined && data.presenceEndTime != "") {
             const date = new Date(data.presenceEndTime);
-            console.log(date);
             presenceOption.setEndTimestamp(date);
         }
 
@@ -72,6 +71,11 @@ const handler = async (event: IpcMainEvent, args: any) => {
         }
 
         await Discord.instance.setActivity(presenceOption.toActivityOption());
+
+        try {
+            await saveData(loginOption.toLoginOption(), presenceOption.toActivityOption());
+        } catch {
+        }
 
         event.reply("response-apply", "Presence Applied!");
     } catch (e) {

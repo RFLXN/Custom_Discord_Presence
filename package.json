@@ -1,5 +1,5 @@
 {
-  "name": "discord_custom_presence",
+  "name": "custom_discord_presence",
   "version": "1.0.0",
   "description": "Simply Settings Discord Presence",
   "main": "dist/main.js",
@@ -12,14 +12,15 @@
   "author": "RFLXN",
   "license": "ISC",
   "devDependencies": {
-    "@types/electron": "^1.6.10",
     "@types/discord-rpc": "^4.0.0",
-    "electron-builder": "^22.11.7"
+    "@types/electron": "^1.6.10",
+    "asar": "^3.0.3",
+    "electron": "^13.2.3",
+    "electron-packager": "^15.3.0"
   },
   "dependencies": {
-    "discord-rpc": "^4.0.1",
-    "electron": "^13.2.3",
     "bootstrap": "^5.1.0",
-    "bootstrap-icons": "^1.5.0"
+    "bootstrap-icons": "^1.5.0",
+    "discord-rpc": "^4.0.1"
   }
 }

@@ -11,24 +11,24 @@ let tray: Tray;
 
 const windowSettings = {
     title: "Custom Discord Presence",
-    icon: path.join(__dirname, "../icon.png"),
+    icon: path.join(__dirname, "./icon.png"),
     width: 570,
     height: 800,
     resizable: false,
     fullscreen: false,
-    autoHideMenuBar: false,
+    autoHideMenuBar: true,
     fullscreenable: false,
     webPreferences: {
         nodeIntegration: true,
         enableRemoteModule: true,
-        devTools: true,
+        devTools: false,
         contextIsolation: false
     }
 };
 
 function createWindow() {
     window = new BrowserWindow(windowSettings);
-    window.loadFile(path.join("../web/index.html"));
+    window.loadFile(path.join("./web/index.html"));
 
     if (window != undefined && !window.isDestroyed()) {
         // send local data to reload input form
@@ -60,7 +60,7 @@ app.on("ready", async () => {
     createWindow();
 
     // init system tray
-    tray = new Tray(path.join(__dirname, "../icon.png"));
+    tray = new Tray(path.join(__dirname, "./icon.png"));
     const trayMenu = Menu.buildFromTemplate([
         {
             label: "Open",

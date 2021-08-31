@@ -66,3 +66,9 @@
 * 이미지를 추가해도 디스코드 서버 캐싱때문에 조금 시간이 걸릴 수 있습니다.
 * Large Image랑 Small Image 동시에 사용 가능합니다.
 
+
+## For Developers
+* This Program has never optimized. so there is so many unnecessary assets on resource folder.
+* This Program running on Electron. so, maybe you can use this on other platforms if you build on your pc.    
+ but I never tested on other platforms... have a good luck :)
+* This Program packed by electron-packager.

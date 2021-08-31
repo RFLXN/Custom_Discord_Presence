@@ -13,7 +13,6 @@
   "license": "ISC",
   "devDependencies": {
     "@types/discord-rpc": "^4.0.0",
-    "@types/electron": "^1.6.10",
     "asar": "^3.0.3",
     "electron": "^13.2.3",
     "electron-packager": "^15.3.0"

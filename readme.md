@@ -68,7 +68,6 @@
 
 
 ## For Developers
-* This Program has never optimized. so there is so many unnecessary assets on resource folder.
 * This Program running on Electron. so, maybe you can use this on other platforms if you build on your pc.    
- but I never tested on other platforms... have a good luck :)
+ (but I never tested on other platforms)
 * This Program packed by electron-packager.
